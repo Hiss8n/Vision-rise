@@ -38,12 +38,11 @@ export default function Testimonials() {
   };
 
   return (
-     <>   
-    <section>  
-      <div className='w-full w-[50px] py-12'>
+       <div className="w-full flex-cols items-center">  
+  <div className='w-full py-12'>
             Testimonials
         </div>  
-    <div className="h-[450px]  py-12 px-6">
+    <div className="justify-between items-center py-12 px-6 max-auto">
       
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -70,9 +69,8 @@ export default function Testimonials() {
         ))}
       </div>
     </div>
-    
-    </section>
-    {/*  <Footer/> */}
-    </>
+   </div>
+   
+  
   );
 }

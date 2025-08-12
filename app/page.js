@@ -8,14 +8,13 @@ import Testimonials from '@/components/testimonies';
 export default function Home() {
   return (
     <>
-    <section>
+    
     <Navbar/>
     <Hero/>
     <Feature/>
-    <Testimonials/>
-   
-    <Footer/>
-     </section>
+  <Testimonials/> 
+
+  <Footer/> 
    
       </>
 

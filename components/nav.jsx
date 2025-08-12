@@ -23,7 +23,7 @@ const Navbar = () => {
         <div className='flex justify-end'>             
        
         <div className=' hidden flex justify-between  md:block md:gap-3'>
-            <Link href={"#"}className='navbar__links relative mr-4'>HOME</Link>
+            <Link href={"#"}className='navbar__links relative mr-4 text-red-700'>HOME</Link>
             <Link href={"/contact.js"}className='navbar__links relative mr-4'>ABOUT</Link>
             <Link href={"#"}className='navbar__links relative mr-4'>CONTACT</Link>
             <Link href={"#"}className='navbar__links relative mr-4'>LOCATION</Link>

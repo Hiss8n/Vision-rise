@@ -1,5 +1,5 @@
 const config = {
-  extends:{
+  extend:{
     bannerImag:"url('/bgImage.png')",
     
 
