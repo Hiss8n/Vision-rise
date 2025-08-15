@@ -35,7 +35,7 @@ export default function Gallery() {
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 hover:transition-opacity-100 cursor">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 hover:transition-opacity-100 cursor bg-slate-100">
       {items.map((item) => (
         <div key={item.id} className="bg-white rounded-xl opacity:100 shadow-lg overflow-hidden group hover:opacity-200  transform transition-transform duration-300 hover:scale-95">
           <Image

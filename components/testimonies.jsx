@@ -38,7 +38,7 @@ export default function Testimonials() {
   };
 
   return (
-       <div className="w-full flex-cols items-center">  
+       <div className="w-full flex-cols items-center bg-slate-50">  
 
   <div className='text-center text-sm text-red-600 md:flex-left md:text-xl'>
              Testimonials
@@ -47,7 +47,7 @@ export default function Testimonials() {
     <div className="justify-between items-center py-12 px-6 max-auto">
       
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 bg-slate-20">
         {reviews.map((review) => (
           <div
             key={review.id}

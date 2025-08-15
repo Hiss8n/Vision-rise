@@ -11,7 +11,7 @@ const Hero = () => {
         height: '100vh'
         
       }} 
-      className="relative w-full flex justify-center item-center"
+      className="relative w-full flex justify-center item-center bg-slate-100"
       >
          
           
