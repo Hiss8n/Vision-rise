@@ -28,7 +28,7 @@ export const POST=async(req)=>{
     const {name,email,phone,message}= await req.json();
 
     try {
-        //await connectDb()
+        await connectDb()
         if(!name || !email || !phone || !message){
             return new NextResponse('Kinldy add a message')
         }

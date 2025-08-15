@@ -3,20 +3,20 @@ import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 export default function Footer() {
   return (
     <section> 
-    <footer className="bg-gray-900 text-white py-8 flex  w-full h-[40px] max-auto">
-      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between md:flex-row gap-2">
+    <footer className="bg-gray-900 text-white py-2 flex  w-full  max-auto ">
+      <div className="w-full mx-auto px-4  flex items-center  justify-between gap-2 md:gap-3">
         {/* Hotel Name */}
-        <div className='w-[30%] h-10 rounded-full ml-12 flex justify-center items-center'>
+        <div className='h-10 rounded-full flex justify-center items-center'>
         
-        <img src='/logo.png'  alt='logo' width={44} height={44} className='contained'/> 
-         <p className="text-md font-semibold">Tunda Hotels</p>
+        <img src='/logo.png'  alt='logo' width={44} height={44} className='w-8 h-8'/> 
+         <p className="text-xs font-semibold md:text-sm">Tunda Hotels</p>
           
 
         </div>
        
 
         {/* Social Icons */}
-        <div className="flex gap-4 text-xl">
+        <div className="flex gap-4 text-xs">
           <a
             href="https://facebook.com"
             target="_blank"
@@ -44,9 +44,11 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <p className="text-sm text-gray-400">
+        <div> 
+        <p className="text-xs text-gray-400 md:text-sm">
           © {new Date().getFullYear()} Tunda Hotels. All rights reserved.
         </p>
+        </div>
       </div>
     </footer>
      </section>

@@ -1,8 +1,10 @@
 'use client'
-
+import { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 export default function ContactPage() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [status, setStatus] = useState("");
+  const [form, setForm] = useState({ name: "", email: "",phone: "", message: "" });
+ /*  const [status, setStatus] = useState("");  */
+  const [isLoading,setIsLoading]=useState(false)
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -10,9 +12,10 @@ export default function ContactPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Sending...");
-
-    const res = await fetch("/api/contact", {
+  
+ setIsLoading(true)
+   try {
+     const res = await fetch("http://localhost:3000/api/orders", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
@@ -22,13 +25,28 @@ export default function ContactPage() {
     setStatus(data.message);
 
     if (res.ok) {
-      setForm({ name: "", email: "", message: "" });
+       setIsLoading(false)
+      setForm({ name: "", email: "",phone: "", message: "" });
+       toast.success('Message sent successfully!');
     }
+     
+     
+    
+   } catch (error) {
+    console.log('Error',error)
+    return 
+    
+   } finally{
+    setIsLoading(false)
+    return
+   }
+  
+    
   };
 
   return (
     <div className="max-w-lg mx-auto p-6">
-      <h1 className="text-2xl font-bold mb-4">Contact Us</h1>
+      <h1 className="text-md font-bold mb-4 text-center text-red-400 md:text-2xl">Contact Us</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
           name="name"
@@ -48,6 +66,15 @@ export default function ContactPage() {
           className="w-full p-2 border rounded"
           required
         />
+         <input
+          name="phone"
+          type="text"
+          placeholder="Your phone number"
+          value={form.phone}
+          onChange={handleChange}
+          className="w-full p-2 border rounded"
+          required
+        />
         <textarea
           name="message"
           placeholder="Your Message"
@@ -58,12 +85,15 @@ export default function ContactPage() {
         />
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700"
+          className="w-full bg-red-400 text-white p-2 rounded hover:bg-red-700"
         >
-          Send Message
+          {isLoading ? (
+            <span>Loading...</span>
+
+          ):( <span> Send</span>)}
         </button>
       </form>
-      {status && <p className="mt-4 text-center">{status}</p>}
+      {/* {isLoading && toast.success('Message send successfull')} */}
     </div>
   );
 }

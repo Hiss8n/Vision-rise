@@ -1,3 +1,4 @@
+import Link from "next/link"
 
 
 const Hero = () => {
@@ -24,7 +25,7 @@ const Hero = () => {
               </div>
            
 
-            
+            <Link href={'/contact'}>  
              <button className="bg-gradient-to-r 
              from-red-500 to-red-200 text-xl px-12 px-4
              opacity-100  
@@ -32,6 +33,7 @@ const Hero = () => {
           
              transform transition-transform duration-100 hover:scale-125 hover:cursor-pointer
              ">Contact us</button>
+             </Link>
        
         </div>
   
