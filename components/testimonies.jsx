@@ -39,9 +39,11 @@ export default function Testimonials() {
 
   return (
        <div className="w-full flex-cols items-center">  
-  <div className='w-full py-12'>
-            Testimonials
-        </div>  
+
+  <div className='text-center text-sm text-red-600 md:flex-left md:text-xl'>
+             Testimonials
+    </div> 
+
     <div className="justify-between items-center py-12 px-6 max-auto">
       
 
@@ -59,16 +61,17 @@ export default function Testimonials() {
               className="mx-auto rounded-full object-cover w-[50px] h-[50px]"
             />
 
-            <h2 className="text-lg font-semibold mt-4">{review.name}</h2>
+            <h2 className="text-md font-md mt-4">{review.name}</h2>
 
             {/* Rating Stars */}
             <div className="mt-2">{renderStars(review.rating)}</div>
 
-            <p className="text-gray-600 mt-3">{review.comment}</p>
+            <p className="text-gray-600 mt-3 text-sm lg:text-lg">{review.comment}</p>
           </div>
         ))}
       </div>
     </div>
+
    </div>
    
   

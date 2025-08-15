@@ -5,7 +5,7 @@ import Gallery from './gallary'
 const Feature = () => {
   return (
     <section>
-        <div className='w-full w-[50px] py-12'>
+        <div className='text-center text-sm text-red-600 md:flex-left md:text-xl py-6'>
             Service & Amenities
         </div>
         <div>
