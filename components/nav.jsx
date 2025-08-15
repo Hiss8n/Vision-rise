@@ -11,12 +11,12 @@ import Image from 'next/image';
 
 const Navbar = () => {
     const [toggleMenu,setToggleMenu]=useState(false)
-  return<nav className='w-full h-[54px] py-4 px-2 mb-2 bg-transparent border-b-2 border-red-600 '>
+  return<nav className='w-full h-[54px] py-4 px-2 mb-2 bg-transparent border-b-1 border-red-700 '>
     <div className='flex justify-between px-1 lg:px-2'>
-        <div className='w-10 h-10  ml-1 flex items-center justify-center pb-3 lg:ml-3'>
+        <div className='w-10 h-10   flex items-center justify-center pb-3 lg:ml-8'>
         
-        <img src='/logo.png'  alt='logo' width={54} height={54} className='w-10 h-10'/> 
-        <p className='text-sm text-green-600 font-bold pl-0 ml-1'>Tunda</p>
+        <img src='/logo.png'  alt='logo' width={54} height={54} /> 
+        <p className='text-sm text-green-600 font-bold pl-0 -ml-2'>Tunda</p>
           
 
         </div>

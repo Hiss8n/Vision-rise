@@ -3,7 +3,7 @@ import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 export default function Footer() {
   return (
     <section> 
-    <footer className="bg-gray-900 text-white py-2 flex  w-full  max-auto ">
+    <footer className="bg-gray-900 text-white py-2 flex  w-full  max-auto py-12 ">
       <div className="w-full mx-auto px-4  flex items-center  justify-between gap-2 md:gap-3">
         {/* Hotel Name */}
         <div className='h-10 rounded-full flex justify-center items-center'>
