@@ -66,7 +66,7 @@ export default function Testimonials() {
             {/* Rating Stars */}
             <div className="mt-2">{renderStars(review.rating)}</div>
 
-            <p className="text-gray-600 mt-3 text-sm lg:text-lg">{review.comment}</p>
+            <p className="text-gray-600 mt-3 text-xs lg:text-sm">{review.comment}</p>
           </div>
         ))}
       </div>

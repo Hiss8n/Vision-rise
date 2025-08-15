@@ -46,7 +46,7 @@ export default function Gallery() {
             className="w-full h-64 object-coverw-full h-64 object-cover group-hover:opacity-80 transition"
           />
           <div className="p-4">
-            <p className="text-gray-700 rounded opacity-200 group-hover:opacity-100 transition">{item.description}</p>
+            <p className="text-gray-700 text-xs rounded opacity-200 group-hover:opacity-100 transition md:text-md">{item.description}</p>
           </div>
         </div>
       ))}
