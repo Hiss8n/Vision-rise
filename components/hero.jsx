@@ -37,6 +37,7 @@ const Hero = () => {
              ">Contact us</button>
              </Link>
              </div>
+             
 
        
         </div>

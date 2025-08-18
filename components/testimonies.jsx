@@ -7,9 +7,10 @@ import gsap from "gsap";
 export default function Testimonials() {
 
   useGSAP(()=>{
-    gsap.to("#test",{
+    gsap.to("#test2",{
       x:0,
-      rotate:360,
+      //rotate:360,
+      skewX:180,
       duration:10,
       repeat:-1,
       stagger:.5,
