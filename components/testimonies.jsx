@@ -1,14 +1,34 @@
+'use client'
 import Image from "next/image";
-import Footer from "./footer";
+
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 export default function Testimonials() {
+
+  useGSAP(()=>{
+    gsap.to("#test",{
+      x:0,
+      rotate:360,
+      duration:10,
+      repeat:-1,
+      stagger:.5,
+      stagger:{
+        amount:0.5,
+        grid:[2,1],
+        axis:'x',
+        from:'edges',
+        ease:'in.Out'
+      }
+    })
+  },[])
   const reviews = [
     {
       id: 1,
       name: "Sarah Johnson",
       image: "/p3.jpg",
       comment: "Absolutely loved my stay! The ocean view was breathtaking and the staff was incredibly friendly.",
-      rating: 5
+      rating: 5,
     },
     {
       id: 2,
@@ -50,6 +70,7 @@ export default function Testimonials() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 bg-slate-20">
         {reviews.map((review) => (
           <div
+          id="test"
             key={review.id}
             className="bg-white rounded-xl  p-6 text-center"
           >

@@ -41,7 +41,7 @@ const Navbar = () => {
                { toggleMenu ?  ( <RxCross2 size={16}/>):(<IoMenuSharp size={16}/>) }
 
             </button>
-            <div className='w-[70px] h-[100vh]'>
+            {/* <div className='w-[70px] h-[100vh]'>
 
               <ul>
                 <li><Link href={'/'}>HOME</Link></li>
@@ -49,7 +49,7 @@ const Navbar = () => {
                 <li><Link href={'/'}>CONTACT</Link></li>
                 <li><Link href={'/'}>LOCATION</Link></li>
               </ul>
-            </div>
+            </div> */}
             
             
         </div>
