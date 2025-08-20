@@ -1,7 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
+import { IoArrowForward } from "react-icons/io5";
 
 export default function Gallery() {
-  const items = [
+/*   const items = [
     {
       id: 1,
       src: "/food.jpg", // stored in /public folder
@@ -33,24 +35,46 @@ export default function Gallery() {
     description: "High class Security team staff and CCTV cameras"
     }
   ];
-
+ */
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 hover:transition-opacity-100 cursor bg-slate-100">
-      {items.map((item) => (
-        <div key={item.id} className="bg-white rounded-xl opacity:100 shadow-lg overflow-hidden 
-        group hover:opacity-200  transform transition-transform duration-300 hover:scale-95 hover:bg-red-400 hover:duration-200">
-          <Image
-            src={item.src}
-            alt={item.alt}
-            width={400}
-            height={250}
-            className="w-full h-64 object-coverw-full h-64 object-cover group-hover:opacity-80 transition "
-          />
-          <div className="p-4">
-            <p className="text-gray-700 text-xs rounded opacity-200 group-hover:opacity-100 transition md:text-md">{item.description}</p>
-          </div>
-        </div>
-      ))}
+  <div className="w-full md:flex md:items-center md:justify-center">
+      <div className="w-1/2 flex items-center w-full h-[200px]">
+      <Image
+      src='/image01.jpg'
+      width={560}
+      height={570}
+
+      />
+
+      </div>
+
+      <div className="w-1/2 bg-blue-700 flex justify-center pt-3 w-full h-[405px] md:flex-col">
+      <div className="grid items-center px-10">
+         <h2 className="text-xl font-lg text-white text-center mb-4 ">STOP CUTTING AIDS</h2>
+         <p className="mb-8 text-yellow-400 text-md font-semibold">Governments globally are slashing foreign aid budgets that millions of vulnerable children  and refugees depend on. 
+          Join us in calling on leaders to put children first.</p>
+
+     
+       <Link href={'/contact'}>  
+                   <button className="bg-gradient-to-r 
+                   from-white-500 to-slate-200 text-sm
+                    px-6 
+                   opacity-100  
+                   rounded-sm text-white py-3
+                   flex items-center gap-2
+                   mb-6
+                
+                   transform transition-transform duration-100 hover:scale-125 hover:cursor-pointer
+                   ">Contact us <IoArrowForward size={17}/>  </button>
+                   </Link>
+                    </div>
+     
+    
+        
+     </div>
+
+
     </div>
+  
   );
 }

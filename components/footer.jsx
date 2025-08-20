@@ -8,8 +8,8 @@ export default function Footer() {
         {/* Hotel Name */}
         <div className='h-10 rounded-full flex justify-center items-center'>
         
-        <img src='/logo.png'  alt='logo' width={44} height={44} className='w-8 h-8'/> 
-         <p className="text-xs font-semibold md:text-sm">Tunda Hotels</p>
+        <img src='/VRAfrica.png'  alt='logo' width={44} height={44} className='w-8 h-8'/> 
+         <p className="text-xs font-semibold ml-3 md:text-sm">Vision Rise</p>
           
 
         </div>
@@ -46,7 +46,7 @@ export default function Footer() {
         {/* Copyright */}
         <div> 
         <p className="text-xs text-gray-400 md:text-sm">
-          © {new Date().getFullYear()} Tunda Hotels. All rights reserved.
+          © {new Date().getFullYear()} Vision Rise. All rights reserved.
         </p>
         </div>
       </div>

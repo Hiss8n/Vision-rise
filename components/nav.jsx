@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useState } from 'react';
 import { IoIosArrowForward } from "react-icons/io";
 import { IoMenuSharp } from "react-icons/io5";
+import Image from 'next/image';
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from './ui/sheet';
 
 
@@ -10,17 +11,20 @@ import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTr
 
 
 const Navbar = () => {
-  const [toggleMenu, setToggleMenu] = useState(false)
-
-  return <nav className='w-full h-[54px] py-4 px-2 mb-2 z-1  bg-slate-100 border-b-1 border-red-700 fixed '>
-    <div className='flex justify-between px-1 lg:px-2'>
-      <div className='w-10 h-10 pl-3  flex items-center justify-center pb-3 lg:ml-8'>
-
-        <img src='/logo.png' alt='logo' width={54} height={54} />
-        <p className='text-sm text-green-500 font-bold pl-0 -ml-2 font-bold'>Tunda</p>
 
 
-      </div>
+
+  const [toggleMenu, setToggleMenu] = useState(false);
+
+
+
+  return <nav className='w-full  py-0 px-2 z-1  bg-slate-100 border-b-1 border-red-700 fixed  '>
+    
+    <div className='flex items-center  justify-between px-0 lg:px-2'>
+     
+      <div className='  pl-5 flex justify-start items-center  lg:ml-8 w-1/2'>
+       <Image src='/VRAfrica.png' width={50} height={50} alt='logo' className='rounded-full md:w-20  ' />
+</div>
 
       <div className='flex justify-end'>
 

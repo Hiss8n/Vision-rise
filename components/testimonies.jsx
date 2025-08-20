@@ -1,8 +1,10 @@
 'use client'
 import Image from "next/image";
+import Link from "next/link";
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { IoArrowForward } from "react-icons/io5";
 
 export default function Testimonials() {
 
@@ -27,14 +29,14 @@ export default function Testimonials() {
     {
       id: 1,
       name: "Sarah Johnson",
-      image: "/p3.jpg",
+      image: "/image01.jpg",
       comment: "Absolutely loved my stay! The ocean view was breathtaking and the staff was incredibly friendly.",
       rating: 5,
     },
     {
       id: 2,
       name: "Michael Lee",
-      image: "/p2.jpg",
+      image: "/image02.jpg",
       comment: "Best hotel experience I've had. The room was spotless, and breakfast was delicious.",
       rating: 4
     },
@@ -47,54 +49,54 @@ export default function Testimonials() {
     }
   ];
 
-  // Helper function to render stars
-  const renderStars = (count) => {
-    return Array(count)
-      .fill("★")
-      .map((star, i) => (
-        <span key={i} className="text-yellow-500 text-lg">
-          {star}
-        </span>
-      ));
-  };
+ 
 
   return (
-       <div className="w-full flex-cols items-center bg-slate-50">  
-
-  <div className='text-center text-sm text-red-600 md:flex-left md:text-xl'>
-             Testimonials
-    </div> 
-
-    <div className="justify-between items-center py-12 px-6 max-auto">
+    <section className="px-12">
+              <div className='text-center text-sm text-red-600  py-12 md:flex-left md:text-xl py-6 bg-slate-100'>
+            SUPPORT WOMEN ENTREPRENUERSHIP
+        </div>
+       
+ 
+      <div className="w-full md:flex md:items-center md:justify-center">
+           
       
-
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 bg-slate-20">
-        {reviews.map((review) => (
-          <div
-          id="test"
-            key={review.id}
-            className="bg-white rounded-xl  p-6 text-center"
-          >
+            <div className="w-1/2 bg-blue-700 flex justify-center pt-3 w-full h-[405px] md:flex-col">
+            <div className="grid items-center px-10">
+               <h2 className="text-xl font-lg text-white text-center mb-4 ">HOW TO HELP WOMEN AND GIRLS</h2>
+               <p className="mb-8 text-yellow-400 text-md font-semibold">Behind every successful woman is a community that believes in her vision — we’re proud to be that support</p>
+      
+           
+             <Link href={'/contact'}>  
+                         <button className="bg-gradient-to-r 
+                         from-white-500 to-slate-200 text-sm
+                          px-6 
+                         opacity-100  
+                         rounded-sm text-white py-3
+                         flex items-center gap-2
+                         mb-6
+                      
+                         transform transition-transform duration-100 hover:scale-125 hover:cursor-pointer
+                         ">Contact us <IoArrowForward size={17}/>  </button>
+                         </Link>
+                          </div>
+           
+          
+              
+           </div>
+            <div className="w-1/2 flex items-center w-full h-[200px]">
             <Image
-              src={review.image}
-              alt={review.name}
-              width={50}
-              height={50}
-              className="mx-auto rounded-full object-cover w-[50px] h-[50px]"
+            src='/women.jpg'
+            width={540}
+            height={580}
+      
             />
-
-            <h2 className="text-md font-md mt-4">{review.name}</h2>
-
-            {/* Rating Stars */}
-            <div className="mt-2">{renderStars(review.rating)}</div>
-
-            <p className="text-gray-600 mt-3 text-xs lg:text-sm">{review.comment}</p>
+      
+            </div>
+      
+      
           </div>
-        ))}
-      </div>
-    </div>
-
-   </div>
+             </section>
    
   
   );
