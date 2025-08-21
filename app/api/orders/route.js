@@ -1,5 +1,5 @@
 import connectDb from "@/lib/db";
-import {CUSTOMER_ORDER_EMAIL_TEMPLETE,CUSTOMER_AUTO_REPLY} from "@/lib/mailing/EmailTemplete";
+import { USERCONTACT_EMAIL_TEMPLETE, USERCONTACT_EMAIL_TEMPLETE_AUTO_REPLY} from "@/lib/mailing/EmailTemplete";
 import {sendEmailOrder,sendAutomaticResponseEmail} from "@/lib/mailing/mail.config";
 import customerOrder from "@/lib/models/order";
 import { NextResponse } from "next/server";
@@ -43,7 +43,7 @@ export const POST=async(req)=>{
             from:newOrder.email,
             to:process.env.EMAIL_USER,
             subject:newOrder.name,
-            html:CUSTOMER_ORDER_EMAIL_TEMPLETE.replace("{message}",newOrder.message).replace("{phone}",newOrder.phone)
+            html:USERCONTACT_EMAIL_TEMPLETE.replace("{message}",newOrder.message).replace("{phone}",newOrder.phone)
             
         })
        
@@ -60,7 +60,7 @@ export const POST=async(req)=>{
             from:process.env.EMAIL_USER,
             to:newOrder.email,
             subject:'We received your email',
-            html:CUSTOMER_AUTO_REPLY.replace("{name}",newOrder.name)
+            html:USERCONTACT_EMAIL_TEMPLETE_AUTO_REPLY.replace("{name}",newOrder.name)
         }) 
         
        } catch (error) {
