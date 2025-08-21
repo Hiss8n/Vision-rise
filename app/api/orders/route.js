@@ -1,7 +1,7 @@
 import connectDb from "@/lib/db";
 import { USERCONTACT_EMAIL_TEMPLETE, USERCONTACT_EMAIL_TEMPLETE_AUTO_REPLY} from "@/lib/mailing/EmailTemplete";
 import {sendEmailOrder,sendAutomaticResponseEmail} from "@/lib/mailing/mail.config";
-import customerOrder from "@/lib/models/order";
+import userContact from "@/lib/models/order";
 import { NextResponse } from "next/server";
 
 
@@ -33,7 +33,7 @@ export const POST=async(req)=>{
             return new NextResponse('Kinldy add a message')
         }
         /* const order =await customerOrder.create(body); */
-       const newOrder =  new customerOrder({name,email,phone,message});
+       const newOrder =  new userContact({name,email,phone,message});
 
        await newOrder.save();
 

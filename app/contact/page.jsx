@@ -1,7 +1,13 @@
 'use client'
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
+
+
+
 export default function ContactPage() {
+
+
+
   const [form, setForm] = useState({ name: "", email: "",phone: "", message: "" });
  /*  const [status, setStatus] = useState("");  */
   const [isLoading,setIsLoading]=useState(false)
@@ -15,7 +21,7 @@ export default function ContactPage() {
   
  setIsLoading(true)
    try {
-     const res = await fetch("http://localhost:3000/api/orders", {
+     const res = await fetch("http://localhost:3000/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
