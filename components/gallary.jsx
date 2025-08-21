@@ -43,6 +43,7 @@ export default function Gallery() {
       src='/children.jpg'
       width={580}
       height={590}
+      alt="children"
 
       />
 

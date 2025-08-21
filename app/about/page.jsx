@@ -16,9 +16,9 @@ const AboutPage = () => {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center top-90">
-          <h1 className="text-2xl md:text-6xl font-bold text-white">
+          <h2 className="text-xl md:text-4xl font-bold text-white">
             ABOUT US
-          </h1>
+          </h2>
         </div>
       </div>
       <div className="max-w-3xl mx-auto px-4 py-10 space-y-6">

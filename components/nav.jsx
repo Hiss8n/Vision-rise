@@ -86,18 +86,18 @@ const Navbar = () => {
                         <IoIosArrowForward size={16} color='#807d7dff' />
 
                       </li>
-                      <li className='flex justify-between mb-2'>
-                        <Link href={"#"} className='text-gray-150 font-bold'>ABOUT</Link>
+                      <li className='flex justify-between mb-3'>
+                        <Link href={"/about"} className='text-gray-150 font-bold'>ABOUT</Link>
                         <IoIosArrowForward size={16} />
 
                       </li>
-                      <li className='flex justify-between mb-2'>
+                      <li className='flex justify-between mb-3'>
                         <Link href={"/contact"} className='text-gray-150 font-bold'>CONTACT</Link>
                         <IoIosArrowForward size={16} />
 
                       </li>
                       <li className='flex justify-between '>
-                        <Link href={"#"} className='text-gray-150 font-bold'>LOCATION</Link>
+                        <Link href={"/donate"} className='text-gray-150 font-bold'>DONATE</Link>
                         <IoIosArrowForward size={16} />
 
 
