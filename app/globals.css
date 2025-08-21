@@ -63,6 +63,29 @@
   scale: 1;
 }
 
+.sub__title{ 
+
+  border-top: #e1d315 solid 6px;
+  border-radius: 12px;
+  width: '40%';
+}
+
+
+/* .sub__title::after{
+  position: absolute;
+  content: "";
+  background-color:#f0ed25;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  bottom: -5px;
+  scale: 0;
+  transform-origin: left;
+  transition: all .3s ;
+
+}
+ */
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -139,4 +162,8 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.color_primary{
+  color: #3336c8;
 }

@@ -75,9 +75,9 @@ export default function Testimonials() {
                          rounded-sm text-white py-3
                          flex items-center gap-2
                          mb-6
-                      
+    
                          transform transition-transform duration-100 hover:scale-125 hover:cursor-pointer
-                         ">Contact us <IoArrowForward size={17}/>  </button>
+                         ">GET INVOLVED<IoArrowForward size={17}/>  </button>
                          </Link>
                           </div>
            

@@ -45,7 +45,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="max-w-lg mx-auto p-6">
+    <div className="max-w-lg mx-auto p-6    top-20 py-28">
       <h1 className="text-md font-bold mb-4 text-center text-red-400 md:text-2xl">Contact Us</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input

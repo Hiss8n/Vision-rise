@@ -38,7 +38,7 @@ const Hero = () => {
              transform transition-transform duration-100 hover:scale-125 hover:cursor-pointer
              ">Contact us</button>
              </Link>
-             
+
              </div>
              
 

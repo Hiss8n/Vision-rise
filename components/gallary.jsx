@@ -40,15 +40,15 @@ export default function Gallery() {
   <div className="w-full md:flex md:items-center md:justify-center">
       <div className="w-1/2 flex items-center w-full h-[200px]">
       <Image
-      src='/image01.jpg'
-      width={560}
-      height={570}
+      src='/children.jpg'
+      width={580}
+      height={590}
 
       />
 
       </div>
 
-      <div className="w-1/2 bg-blue-700 flex justify-center pt-3 w-full h-[405px] md:flex-col">
+      <div className="w-1/2 bg-blue-700 flex justify-center pt-3 w-full h-[388px] md:flex-col">
       <div className="grid items-center px-10">
          <h2 className="text-xl font-lg text-white text-center mb-4 ">STOP CUTTING AIDS</h2>
          <p className="mb-8 text-yellow-400 text-md font-semibold">Governments globally are slashing foreign aid budgets that millions of vulnerable children  and refugees depend on. 
@@ -65,7 +65,7 @@ export default function Gallery() {
                    mb-6
                 
                    transform transition-transform duration-100 hover:scale-125 hover:cursor-pointer
-                   ">Contact us <IoArrowForward size={17}/>  </button>
+                   ">ADD YOUR NAME <IoArrowForward size={17}/>  </button>
                    </Link>
                     </div>
      
