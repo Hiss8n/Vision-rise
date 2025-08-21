@@ -10,8 +10,9 @@ const DONATE = () => {
       
     }
   }
-  return (
-        <div className="max-w-lg mx-auto p-6    top-20 py-28">
+  return (  
+    <>  
+        <div className="max-w-lg mx-auto p-6 top-20 py-28">
       <h1 className="text-md font-bold mb-4 text-center text-red-400 md:text-2xl"> HOW TO DONATE</h1>
       <div className="p-8 bg-gradient-to-r from-blue-500 via-slate-300 to-blue-200 h-[130px] rounded-t-sm">
         <h3>E-MPESA MOBILE MONEY TRANSFERS</h3>
@@ -23,13 +24,28 @@ const DONATE = () => {
         <span>Email:contact managemant: hissentutu@gmail.com or sakinatuwer@gmail.com</span>
 
       </div>
+
       <div className="p-8 bg-gradient-to-r from-blue-500 via-slate-300 to-blue-200 h-[130px] rounded-bt-sm">
         <h3>WESTERN UNION TRANSFERS</h3>
         <span> Number:+254758583816</span>
 
       </div>
+      <div className="text-md text-center pt-3">
+        OR
+      </div>
+      <div className="p-6  h-[130px] rounded-bt-sm">
+        <h3>BOOK A ZOOM CALL:</h3>
+        <span> WhatsApp:+254758443808</span>
+
+      </div>
+
+
+      
       
     </div>
+    
+    
+    </>
   )
 }
 
