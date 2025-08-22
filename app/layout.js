@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Tunda Hotel",
-  description: "Experience adventure in Kakuma town",
+  title: "Vision Rise",
+  description: "Help refugee children and women to the best of their potential",
 };
 
 export default function RootLayout({ children }) {
