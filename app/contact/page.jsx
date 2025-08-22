@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react";
-import toast from "react-hot-toast";
+import toast, { ToastBar, Toaster } from "react-hot-toast";
 
 
 
@@ -31,28 +31,44 @@ export default function ContactPage() {
     setStatus(data.message);
      setForm({ name: "", email: "",phone: "", message: "" });
 
+   
+
     if (res.ok) {
        setIsLoading(false)
+       setForm({ name: "", email: "",phone: "", message: "" });
+       
      
        toast.success('Message sent successfully!');
+        
     }
+    setIsLoading(false);
+
      
      
     
    } catch (error) {
     console.log('Error',error)
-    return 
+     setIsLoading(false);
+
     
-   } finally{
-    setIsLoading(false)
-    return
-   }
+    
+   } 
   
     
   };
 
   return (
     <div className="max-w-lg mx-auto p-6    top-20 py-28">
+      
+      <div>
+        <Toaster toast={toast} position="bottom-right">
+  {(t) => <ToastBar toast={t} />}
+        </Toaster>
+         
+
+      </div>
+     
+     
       <h1 className="text-md font-bold mb-4 text-center text-red-400 md:text-2xl">Contact Us</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
@@ -95,7 +111,7 @@ export default function ContactPage() {
           className="w-full bg-red-400 text-white p-2 rounded hover:bg-red-700"
         >
           {isLoading ? (
-            <span>Loading...</span>
+            <span>sending...</span>
 
           ):( <span> Send</span>)}
         </button>
