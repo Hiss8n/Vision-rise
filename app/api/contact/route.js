@@ -11,8 +11,8 @@ export const GET =async()=>{
     try {
          await connectDb();
 
-         const users=await  customerOrder.find();
-         if(!users) return {message:'No user found!!'}
+         const users=await  userContact.find();
+         if(!users) return {message:'No users found!!'}
          return new NextResponse(JSON.stringify(users),{status:200})
         
     } catch (error) {

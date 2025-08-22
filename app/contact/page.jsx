@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 
 
@@ -29,10 +29,11 @@ export default function ContactPage() {
 
     const data = await res.json();
     setStatus(data.message);
+     setForm({ name: "", email: "",phone: "", message: "" });
 
     if (res.ok) {
        setIsLoading(false)
-      setForm({ name: "", email: "",phone: "", message: "" });
+     
        toast.success('Message sent successfully!');
     }
      
